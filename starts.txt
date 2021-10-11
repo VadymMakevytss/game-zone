@@ -1,0 +1,64 @@
+expo init game-zone
+expo start
+create screeens folder to store screens interface
+assets folder add fonts folder inside fonts add files
+import inside App.js: import * as Font from 'expo-font'
+expo install expo-font
+expo install expo-app-loading
+import inside App.js: import AppLoading from 'expo-app-loading';
+create global style store folder styles/global.js
+use them globally inside screen components
+
+*----- Stick Navigation ------*
+For navigation use: react-navigation: https://reactnavigation.org/docs/getting-started/
+npm i react-navigation / yarn add @react-navigation/native
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+yarn add react-navigation-stack
+create folder routes/homeStack.js
+implement navigation App.js -> homeStack.js
+
+*----- Drawer Navigation -----*
+Does not show Header automatically 
+npm i react-navigation-drawer / yarn add react-navigation-drawer
+create new file inside routs/aboutStack.js
+implement some changes inside homeStack.js and aboutStack.js files
+create routes/drawer.js
+implement this one inside App.js
+!!!! to fix bug run code: 1. npm i react-native-reanimated@1.13.1 or 
+                            yarn add react-native-reanimated@1.13.1
+                          2.  expo start --clear
+To open SubeMenu move left side screen                          
+
+*-----Custom Header Component -----*
+create new folder shared/Header.js
+Import inside Header.js
+    import React from 'react';
+    import { StyleSheet, Text, View } from 'react-native';
+    import { MAterialIcons } from '@expo/vectore-icons';
+Implement Header.js
+import homeStack.js and aboutStack.js: import { Header } from '../shared/Header';
+                                       import React from 'rect';
+
+*----- CustomCard Component -----*
+inside shared create card.js component
+implement Card.js and import that to Home.js and ReviewDetails.js
+
+*----- Using images in react-native ----*
+import images inside assets folder
+inside ReviewDetails.js implement image usage
+add in global.js image ratings
+
+*----- BackGround images ----*
+Inside Header.js import Image, ImageBackground
+impliment that
+
+*----- Modal -----*
+import Modal inside Home.js
+inside Home.js create state: modalOpen
+import MaterialIcons 
+
+*----- Formik Forms -----*
+yarn add formik
+inside screens folder create file ReviewForm.js
+import ReviewForm.js inside Home.js
+add styles in global.js
